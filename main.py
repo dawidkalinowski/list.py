@@ -4,6 +4,7 @@ tasks = []
 
 
 def show_tasks_with_number():
+    print()
     task_index = 1
     for task in tasks:
         print(str(task_index) + ". " + task)
@@ -12,12 +13,12 @@ def show_tasks_with_number():
     print()
 
 def add_task():
-    task = input("Wpisz tresc zadania: ")
+    task = input("What is the task: ")
     tasks.append(task)
-    print("zadanie zostało dodane")
+    print("Task added")
 
 def delete_task():
-    task_index = int(input("Podaj numer zadania"))
+    task_index = int(input("Which one would you like to remove?"))
 
     if task_index < 0 or task_index > len(tasks) - 1:
         print("No such action")
